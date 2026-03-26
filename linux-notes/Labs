@@ -1,1 +1,14 @@
+# Linux Challenge Lab
 
+## Objective
+Practice navigation, file creation, and command usage
+
+## Tasks Completed
+- Created directory linux_challenge
+- Created and edited files using nano
+- Used grep to search for text
+- Used chmod to modify permissions
+
+## Key Takeaways
+- Linux navigation is essential for system control
+- File permissions control access and execution
