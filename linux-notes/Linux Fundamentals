@@ -1,0 +1,24 @@
+# Linux Fundamentals
+
+## Navigation
+pwd -> shows current directory
+ls -> lists files
+cd -> change directory
+
+## File Handling
+nano -> create/edit files
+cat -> view file contents
+
+## Permissions
+r = read
+w = write
+x = execute
+
+chmod +x file -> makes file executable
+
+## Searching
+grep "text" file -> finds text
+
+## Processes
+ps -> shows processes
+top -> live system monitor
