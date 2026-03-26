@@ -1,0 +1,215 @@
+# Networking Fundamentals (March 18)
+
+## Overview
+
+Networking is the process of how data moves from one device to another across a network (such as the internet).
+
+Basic flow of data:
+
+* User enters a domain name (e.g., google.com)
+* DNS resolves the domain to an IP address
+* The device connects to the IP using a specific port
+* A request is sent (HTTP/HTTPS)
+* The server responds with data
+
+---
+
+## IP Addresses
+
+An IP address is a unique identifier assigned to a device on a network.
+
+* Used to locate and communicate with devices
+* Example (IPv4): 192.168.1.1
+* Two common types:
+
+  * IPv4 (most common)
+  * IPv6 (newer, longer format)
+
+Key idea:
+
+* IP address = destination of data
+
+---
+
+## Ports
+
+Ports are logical endpoints used to identify specific services running on a device.
+
+* A single device can have multiple services running at once
+* Each service uses a different port
+
+Key idea:
+
+* IP address identifies the device
+* Port identifies the service
+
+Common ports to memorize:
+
+* 80 → HTTP (web, not secure)
+* 443 → HTTPS (secure web traffic)
+* 22 → SSH (remote login)
+* 53 → DNS (domain name resolution)
+* 21 → FTP (file transfer)
+
+---
+
+## TCP vs UDP
+
+### TCP (Transmission Control Protocol)
+
+* Connection-oriented
+* Reliable (guarantees delivery)
+* Ordered data transmission
+* Slower due to error checking
+
+Used for:
+
+* Web browsing (HTTP/HTTPS)
+* File transfers
+* Remote access (SSH)
+
+---
+
+### UDP (User Datagram Protocol)
+
+* Connectionless
+* No guarantee of delivery
+* Faster, but less reliable
+* No error correction
+
+Used for:
+
+* Streaming
+* Online gaming
+* DNS queries
+
+---
+
+## DNS (Domain Name System)
+
+DNS translates domain names into IP addresses.
+
+Example:
+
+* google.com → 142.250.x.x
+
+Purpose:
+
+* Humans use domain names
+* Computers use IP addresses
+
+Process:
+
+1. User enters domain name
+2. DNS server returns corresponding IP
+3. Device connects to that IP
+
+---
+
+## HTTP vs HTTPS
+
+### HTTP (Port 80)
+
+* Sends data in plaintext
+* Not secure
+
+### HTTPS (Port 443)
+
+* Uses encryption (TLS)
+* Secures communication between client and server
+
+Key idea:
+
+* HTTPS = HTTP + encryption
+
+---
+
+## How Data Moves (Full Process)
+
+1. User enters a website URL
+2. DNS resolves domain to IP address
+3. Device connects to IP using a port (usually 443)
+4. TCP connection is established
+5. HTTP/HTTPS request is sent
+6. Server responds with data
+
+---
+
+## Linux Networking Commands
+
+### ping
+
+Command:
+ping google.com
+
+Purpose:
+
+* Tests connectivity to another device
+* Uses ICMP protocol
+
+What it shows:
+
+* IP address of the target
+* Response time (latency)
+
+---
+
+### ifconfig
+
+Command:
+ifconfig
+
+Purpose:
+
+* Displays network interface information
+
+What to look for:
+
+* inet → your IP address
+
+---
+
+### netstat
+
+Command:
+netstat -tuln
+
+Purpose:
+
+* Shows active connections and listening ports
+
+What to look for:
+
+* Open ports
+* Services running on the system
+
+---
+
+## Key Cybersecurity Concepts
+
+* Open ports can indicate running services
+* Unexpected ports may indicate security risks
+* Unencrypted traffic (HTTP) can be intercepted
+* Understanding network traffic is essential for threat detection
+
+---
+
+## Summary
+
+* IP address identifies a device
+* Ports identify services
+* DNS resolves domain names to IP addresses
+* TCP is reliable, UDP is fast
+* HTTPS secures communication
+* Linux tools help analyze network activity
+
+---
+
+## Self-Test Questions
+
+1. What is the difference between an IP address and a port?
+2. What does DNS do?
+3. When would you use TCP vs UDP?
+4. What port does HTTPS use?
+5. What does the ping command test?
+6. What information does netstat provide?
