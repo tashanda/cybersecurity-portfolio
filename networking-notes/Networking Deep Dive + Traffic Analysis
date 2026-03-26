@@ -40,3 +40,6 @@ active connections
 ## ifconfig or ip a
 ip a
 Shows your IP address
+
+## Key Concept
+Data moves through networks in packets using protocols
