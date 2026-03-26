@@ -22,3 +22,9 @@ grep "text" file -> finds text
 ## Processes
 ps -> shows processes
 top -> live system monitor
+
+## What I Learned
+- How to navigate Linux using terminal
+- How to create and edit files
+- How file permissions work
+- How to search and monitor processes
