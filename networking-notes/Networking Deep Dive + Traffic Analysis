@@ -1,0 +1,42 @@
+Networking Deep Dive + Traffic Analysis
+
+# Core Concept -- How Data Moves (Critical)
+When you type: ping google.com
+This happens:
+1. DNS converts google.com -> IP
+2. Your computer sends packets
+3. Packets travel across networks
+4. Google responds
+
+# Packets (Foundation)
+What is a packet? - A packet is a small chunk of data sent across a network
+Each packet contains:
+Source IP
+Destination IP
+Data
+*Think: Internet = millions of packets moving everywhere
+
+# Important Protocols (Review + Apply)
+HTTP -> Port 80
+HTTPS -> Port 443
+SSH -> Port 22
+FTP -> Port 21
+DNS -> Port 53
+
+# Commands
+## ping (connectivity test)
+ping google.com
+Shows:
+packets sent
+response time
+## curl (request a website)
+curl google.com
+Shows raw HTML response
+## netstat (network connections)
+netstat -tulnp
+Shows:
+open ports
+active connections
+## ifconfig or ip a
+ip a
+Shows your IP address
