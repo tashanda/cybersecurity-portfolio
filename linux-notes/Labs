@@ -1,4 +1,4 @@
-# Linux Challenge Lab
+1. # Linux Challenge Lab
 
 ## Objective
 Practice navigation, file creation, and command usage
@@ -12,3 +12,19 @@ Practice navigation, file creation, and command usage
 ## Key Takeaways
 - Linux navigation is essential for system control
 - File permissions control access and execution
+
+2. # File Permissions Lab
+
+## Objective
+Understand Linux file permissions
+
+## Commands Used
+ls -l
+chmod +x mission.txt
+
+## Observations
+- Initial permissions: rw-r--r--
+- After chmod: rwxr-xr-x
+
+## Key Takeaway
+Permissions determine who can read, write, or execute files
