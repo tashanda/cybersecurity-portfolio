@@ -1,0 +1,25 @@
+Packet Sniffing Intro (Beginner Level)
+# What is Packet Sniffing?
+Packet Sniffing = capturing and analyizing network traffic
+**Think: You're watching data travel across a network in real time
+ex. When you run: ping google.com
+Packets are sent from machine, travel across network, and come back
+sniffer lets you see those packets
+# Why this matters
+Packet sniffing is used for:
+detecting attacks
+analyzing malware
+troubleshooting networks
+spying on traffic (if unencrypted)
+
+use tcpdump to capture packets and observe ICMP traffic when pinging Google
+
+**HTTP -> readable traffic
+HTTPS -> encrypted (can't read)
+
+# Commands
+sudo tcpdump -> captures arll the traffic
+sudo tcpdump -> capture ping traffic
+sudo tcpdump host <ip> -> filter by IP
+
+Key Idea: Packets show how data is moved across networks
