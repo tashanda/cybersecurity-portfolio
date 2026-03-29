@@ -1,0 +1,17 @@
+Intro to Nmap
+# What Nmap does
+Nmap = Network mapper
+It scans open ports, running services, and device on network
+**Think: what doors are open on this computer
+# Nmap Scanning
+
+Nmap = tool to scan networks and ports
+
+Commands:
+nmap 127.0.0.1 → scan local machine
+nmap <ip> → scan target
+nmap -sV <ip> → show service versions
+nmap -p <ports> <ip> → scan specific ports
+
+Key idea:
+Open ports = possible entry points
