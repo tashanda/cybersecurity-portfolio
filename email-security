@@ -1,0 +1,117 @@
+Email Security
+
+
+# Email Headers
+  ## SSMTP.mailfrom (P1 Sender)
+    Technical sender address
+    P1 sender (the REAL sender)
+    The address mail servere verify
+  ## From (P2 Sender)
+    The visible sender address seen by users
+    aka P2 sender
+    Weakness: can be easily spoofed by attackers
+  ## Authentication Results
+     Contains email authentication results
+     Shows whether SPF, DKIM, and DMARC checks passed or failed
+
+# Email Authentication Checks
+  ## Sender Policy Framework (SPF)
+    Verifies that the sending mail server is authorized by the domain
+    Uses DNS records to validate sender IP
+    If SPF fails:
+    THe Sending server isn't approvged by the domain
+    Possible spoofing attempt
+  ## DomainKeys Identified Mail (DKIM)
+    Uses asymmetric encry[tion to verify email integrity
+    Public key is stored in the domain's DNS records
+    If DKIM fails:
+    The email may have been tampered with
+    Signature verification failed
+  ## Domain-based MEssage Authentication, Reporting, and Conformance (DMARC)
+    Validates alignment between P1 (SMTP.mailfrom) and P2 (From)
+    If DMARC fails:
+    High likelihood of email spoofing
+
+# Phishing
+  Phishing is the act of sending fraudulent emails pretending to be legitimate to steal information or gain access.
+    ## Types
+    Spear Phishing - Targeted at specific person or company
+    Whaling - targets high-level individuals (CEO, admin)
+    Smishing - Phising via text
+    Vishing - Phishing via phone calls
+
+# Credential Harvesting
+  Emails designed to trick users into entering login credentials (often via fake login pages)
+    ## Indicators
+    Newly registered domains (< 1 month old)
+    Broken or sus URLs (e.g., 404 pages)
+    Login requests outside trusted platforms
+    ## Mitigations
+    Multi-Factor Authentication (MFA)
+    Data Loss Prevention (DLP) policies
+    Domain blocklists
+
+# Malware Delivery
+  Emails designed to get users to execute malicious code
+  ## Common Delivery Methods
+  File-sharing links
+  Attachments
+  multi-stage downloads
+  User-triggered execution
+  ## Indicators
+  Unknown processes running
+  Apps like Word or Chrome spawning PowerShell or cmd.exe
+  Suspicious outbound network traffic after interaction
+  Antivirus alerts in mail client
+
+# Social Engineering
+  Manipulating users into performing harmful actions
+  ## Examples
+  Phishing for sensitive info
+  Business Email Compromise (BEC)
+  Unauthorized wire transfers
+  Data exfiltration
+  ## Indicators
+  Spoofed P2 sender
+  Failed SPF/DKIM checks
+  Unknown or suspicious sender domains
+  Suspicious subject lines or email content
+  ## Mitigations
+  Employee security training
+  Assume emails are malicious until proven benign
+
+  # Social Engineering Detection
+    ## Psychological Tactics Used
+    Authority - pretending to be a boss or trusted entity
+    INtimidation - threats if action is not taken
+    urgency - pressure to act quickly
+    ## Red Flags
+    Inconsistend or unnatural language
+    Overly polite or generic greetings
+    Spelling and grammar mistakes
+    Missing email signature
+    Use of personal info to build trust
+  # Recon / Test Enumeration
+    Often overlooked attack type
+      Emails designed to confirm a target existss and will respond
+      Goal is not immediate harm, but furure exploitation
+      *Can lead to more advanced phishing or attacks later
+  # General Email Security Principle
+  Eamils w/o clear malicious goal aren't automatically safe
+  can be:
+    spam
+    Marketing
+  If unsure:
+    Categorize as undetermined
+    Escalate to more expereinced analyst
+# Indicators of Email Compromise
+  ## Suspicious Behavior
+  Strange inbox rules
+  Mass email sending or deletion
+  Large file downloads or charing activity
+  ## Account Activity
+  Unusual sign-in attempts
+  Multiple authentication events across services
+  Logins from unfamiliar locations
+  
+    
