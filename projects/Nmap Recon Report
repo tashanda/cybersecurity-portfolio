@@ -9,6 +9,38 @@ nmap -sV scanme.nmap.org
 nmap -A scanme.nmap.org
 
 ## Scan Results
+?
+Apr 4 17:37
+tashanda@tashanda-VirtualBox: ~
+=
+口
+tashanda@tashanda-VirtualBox:~S nmap -sV scanme.nmap.org
+Starting Nmap 7.94SVN(https://nmap.org) at 2026-04-04 17:26 EDT
+Napscan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.088s latency).
+Other addresses for scanmenmap.org (not scanned): 2600:301:: f03c: 91ff: fe18:bb2
+f
+PORT
+Not shown: 996 filtered tcp ports (no-response)
+STATE SERVICE
+VERSION
+open
+ssh
+22/ tcp
+OpenSSH 6.6.1p1 Ubuntu Zubuntu2.13 (Ubuntu Linux; pro
+tocol 2.0)
+80/ tcp
+open
+http
+Apache httpd 2.4.7 ( (Ubuntu))
+9929/tcp
+open
+ning-echo Nping echo
+31337/tcp open tcpwrapped
+Service Info: OS: Linux; CPE: cpe:/o: linux: linux_kernel
+Service detection performed. Please report any incorrect rgsults at https: //nmap
+•org/submit/ •
+Nmap done: 1 IP address (1 host up) scanned in 15.07 seconds tashanda@tashanda-VirtualBox:~$
 
 ## Open Ports & Services
 22 -> SSH (profile login) *brute force
