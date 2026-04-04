@@ -1,0 +1,62 @@
+# Nmap Recon Report
+
+## Objective - To perform reconnaissance on a target system using Nmap and identify open ports and services.
+
+## Target (scanme.nmap.org)
+
+## Scan Commands Used
+nmap -sV scanme.nmap.org
+nmap -A scanme.nmap.org
+
+## Scan Results
+
+## Open Ports & Services
+22 -> SSH (profile login) *brute force
+80 -> HTTP (website not-secure) *vulnerable
+9929 -> Uncommon/Unknown Port
+31337 -> Uncommon/Unknown port
+
+## Analysis
+### Port 22 (SSH)
+This allows profile login. Attackers are capable of getting in through brute force
+
+
+### Port 80 (HTTP)
+This is an unsecure website. There are many vulnerablilities due to there being no encryption.
+Vulnerablilities: 
+-SQL Injection
+-XSS
+
+
+### Port 9929
+This is a non=standard port with no recognizable default service
+Vulnerablilities:
+-could run an unknown applicaiton
+-unknown services can increase attack surface
+### Port 31337
+This is a non-standard port often associated with a backdoor or test service. Its presence may indicate a hidden or non=public service
+Vulnerabilities:
+-Could be used for unauthorized access
+-May run custom or vulnerable software
+
+## Further Enumeration
+-Attempt service detection with further scanning
+-Try connecting to the port manually
+-Identify what applicaiton is running
+
+### Non-Standard Ports
+9929 and 31337 are non-standard ports that may lead to custom or test services
+These ports are important because:
+-They could run unpacthed or unknown software
+-They increase attack service
+-Attackers will check these for further investigation
+
+## Connection to Email Security
+- SMTP runs on port 25
+- Attackers can scan for open mail servers
+- Open email servers can be used for phishing/spoofing
+
+## Key Takeaways
+-Nmap is used for reconnaisance
+-Open ports show possible entry points
+-Understanding services helps identify attack paths
