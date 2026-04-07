@@ -1,0 +1,21 @@
+# Wireshark Day 1 Notes
+
+## What is Wireshark
+A tool is used to capture and analyze network traffic.
+
+## What is a Packet
+A small unit of data sent across a network.
+
+## Key Filters
+dns
+tcp
+tcp.port == 443
+http
+
+## Key Concepts
+- DNS resolves domain names
+- TCP handles communication
+- HTTPS encrypts data
+
+## Connection to Cybersecurity
+Used to detect suspicious or malicious traffic
