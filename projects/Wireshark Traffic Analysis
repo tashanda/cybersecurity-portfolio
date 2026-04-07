@@ -1,0 +1,27 @@
+# Wireshark Traffic Analysis
+## Domains Observed
+- google.com
+- youtube.com
+- github.com
+
+## IP Addresses Returned
+104.68.251.43 github
+140.82.113.21
+192.168.1.126
+185.199.109.154
+
+## Protocols Observed
+- DNS
+- HTTP
+- TCP
+
+## Most Common Port
+- 443 (HTTPS)
+
+## Key Observations
+- DNS resolves domain names to IPs
+- TCP established connections
+- HTTPS encrypts traffic
+
+## What I learned
+I learned to analyze packets using wireshark. I learned how to filter using dns, tcp, http, etc. I learned how to read the packets in order to see how the computers are communicating with each other.
