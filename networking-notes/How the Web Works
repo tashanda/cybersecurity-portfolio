@@ -1,0 +1,29 @@
+# How the Web Works (Cybersecurity View)
+
+## Flow
+Browser -> DNS -> TCP -> HTTP/HTTPS -> Server -> Database -> Server -> Browser
+
+## DNS
+Resolves domain names to IP addresses
+
+## TCP
+Established connection using 3-way handshake (SYN, SYN-ACK, ACK)
+
+## HTTP/HTTPS
+Protocol for communication between client and server
+- HTTP = not secure (port 80)
+- HTTPS = encrypted (port 443)
+
+## Server
+Processes requests and returns responses
+
+## Database (SQL)
+Used to store and retrieve data
+
+## Key Insight
+User input flows through web applications and interacts with databases. If not handled properly, this can lead to vulnerabilities like SQL Injection.
+
+## Cybersecurity Relevance
+- Nmap idenfities open ports (80, 443)
+- Wireshark captures DNS, TCP, and HTTP traffic
+- SQL Injection targets database queries
