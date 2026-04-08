@@ -1,0 +1,48 @@
+# SQL Injection (SQLi)
+
+## Definintion
+SQL Injection is an attack where user input is used to manipulate SQL queries.
+
+## How It Works
+User input is inserted into a SQL query without proper validation
+
+## Example Query
+SELECT * FROM users WHERE username = 'admin' AND password = '1234':
+
+## Attack 1 (Comment Injection)
+Input: admin' --
+
+Result:
+SELECT * FROM users WHERE username = 'admin' -- AND password = '1234':
+
+## Attack 2 (Always True)
+Input: ' OR '1'='1
+
+## Why It Works
+- -- comments out art of the query
+- '1'='1' is always true
+
+## Types
+- Authentication bypass: Log in without credentials
+- Data extraction: Combines results to leak data
+UNION SELECT username, password FROM users;
+- Blind SQL injection: No visible output, attacker infers via behavior
+
+Connect to Web Flow
+Browser -> HTTP Request -> Server -> SQL Query -> Database
+
+## Impact
+- Unauthorized access
+- Data leaks
+- Full database compromise
+
+## Prevention
+- Paramaterized queries
+SELECT * FROM users 
+WHERE username = ? 
+AND password = ?;
+*Input treated ad data, NOT code
+- Input validation
+
+## Key Insight
+User input should never be directly inserted into SQL queries.
