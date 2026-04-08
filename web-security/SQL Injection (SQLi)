@@ -41,7 +41,7 @@ Browser -> HTTP Request -> Server -> SQL Query -> Database
 SELECT * FROM users 
 WHERE username = ? 
 AND password = ?;
-*Input treated ad data, NOT code
+*Input treated as data, NOT code
 - Input validation
 
 ## Key Insight
